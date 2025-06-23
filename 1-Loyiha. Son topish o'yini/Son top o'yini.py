@@ -1,0 +1,92 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "56f3e0b0-1618-4071-b88a-9cd654c68397",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# son topish o'yini\n",
+    "\n",
+    "import random\n",
+    "\n",
+    "def SONTOP(x = 10):\n",
+    "    tasodifiy_r = random.randint(1, x)\n",
+    "    print(f\"Men 1 dan {x} gacha son o'yladim, topa olasizmi?\", end='')\n",
+    "    taxminlar = 0\n",
+    "    while True:\n",
+    "        taxminlar += 1\n",
+    "        taxmin = int(input(\">\"))\n",
+    "        if taxmin < tasodifiy_r:\n",
+    "            print(\"Xato, men o'ylagan son bundan katta. Yana harakat qiling:\", end='')\n",
+    "        elif taxmin > tasodifiy_r:\n",
+    "            print(\"Xato, men o'ylagan son bundan kichik. Yana harakat qiling:\", end='')\n",
+    "        else:\n",
+    "            break\n",
+    "            \n",
+    "    print(f\"Tabriklayman. {taxminlar} urinishda topdingiz!\")\n",
+    "    return taxminlar\n",
+    "\n",
+    "def sontopadi(x = 10):\n",
+    "    input(f\" 1 dan {x} gacha son o'ylang va istalgan son yozing. Men topaman:\")\n",
+    "    kichik = 1\n",
+    "    katta = x\n",
+    "    taxminlar = 0\n",
+    "    while True:\n",
+    "        taxminlar += 1\n",
+    "        if kichik != katta:\n",
+    "            taxmin = random.randint(kichik, katta)\n",
+    "        else:\n",
+    "            taxmin = kichik\n",
+    "        javob = input(f\"Siz {taxmin} sonni o'yladingiz: to'g'ri (t), \"\n",
+    "                      f\"men o'ylagan son bundan katta (+), yoki kichik (-)\".lower())\n",
+    "        if javob == '-':\n",
+    "            katta = taxmin - 1\n",
+    "        elif javob == '+':\n",
+    "            quyi = taxmin + 1\n",
+    "        else:\n",
+    "            break\n",
+    "    print(f\"Men {taxminlar} ta taxmin bilan topdim!\")\n",
+    "    return taxminlar\n",
+    "\n",
+    "def natija(x = 10):\n",
+    "    yana = True\n",
+    "    while yana:\n",
+    "        taxminlar_1 = SONTOP(x)\n",
+    "        taxminlar_2 = sontopadi(x)\n",
+    "\n",
+    "        if taxminlar_1 > taxminlar_2:\n",
+    "            print(f\"Men {taxminlar_2} taxmin bilan topdim va yutdim!\")\n",
+    "        elif taxminlar_1 < taxminlar_2:\n",
+    "            print(f\"Siz {taxminlar_1} taxmin bilan topdingiz va yutdingiz!\")\n",
+    "        else:\n",
+    "            print(\"Durrang!\")\n",
+    "        yana = int(input(\"Yana o'ynaymizmi? (ha(1)/yo'q(0))\"))\n",
+    "\n",
+    "natija()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
