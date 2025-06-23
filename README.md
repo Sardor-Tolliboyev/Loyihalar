@@ -1,2 +1,2 @@
 # Loyihalar
-python bo'yicha loyihalar
+pythonni kutubxonalaridan foydalanilgan loyihalar
