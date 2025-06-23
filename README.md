@@ -1,2 +1,2 @@
+pythonni kutubxonalaridan foydalanilgan 
 # Loyihalar
-pythonni kutubxonalaridan foydalanilgan loyihalar
